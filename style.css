@@ -1,0 +1,267 @@
+/* DevOps Todo App - Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.input-section {
+    padding: 30px;
+    background: #f8f9fa;
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.task-input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.task-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.priority-select {
+    padding: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+    cursor: pointer;
+}
+
+.add-btn {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+}
+
+.filter-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active {
+    background: #667eea;
+    transform: scale(1.05);
+}
+
+.tasks-section {
+    padding: 0 30px 30px;
+}
+
+.task-item {
+    background: white;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #28a745;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.task-item.high {
+    border-left-color: #dc3545;
+}
+
+.task-item.medium {
+    border-left-color: #ffc107;
+}
+
+.task-item.completed {
+    opacity: 0.7;
+    text-decoration: line-through;
+}
+
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 16px;
+}
+
+.task-priority {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.priority-high {
+    background: #ffebee;
+    color: #dc3545;
+}
+
+.priority-medium {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.priority-low {
+    background: #d4edda;
+    color: #155724;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.3s;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: #f8f9fa;
+    padding: 20px;
+    margin: 0 30px 30px;
+    border-radius: 10px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #6c757d;
+}
+
+.empty-state img {
+    width: 100px;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .filter-section {
+        flex-wrap: wrap;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .container {
+        margin: 10px;
+    }
+    
+    body {
+        padding: 10px;
+    }
+}

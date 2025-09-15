@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 DevOps Task Manager</h1>
+            <p>This webapp is a practice for Automating AWS Deployments with Terraform</p>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <input type="text" class="task-input" id="taskInput" placeholder="Enter your DevOps task (e.g., Deploy to staging environment...)">
+                <select class="priority-select" id="prioritySelect">
+                    <option value="low">Low Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <button class="add-btn" onclick="addTask()">Add Task</button>
+            </div>
+            
+            <div class="filter-section">
+                <button class="filter-btn active" onclick="filterTasks('all')">All Tasks</button>
+                <button class="filter-btn" onclick="filterTasks('pending')">Pending</button>
+                <button class="filter-btn" onclick="filterTasks('completed')">Completed</button>
+                <button class="filter-btn" onclick="filterTasks('high')">High Priority</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number" id="totalTasks">0</div>
+                <div class="stat-label">Total Tasks</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="completedTasks">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="pendingTasks">0</div>
+                <div class="stat-label">Pending</div>
+            </div>
+        </div>
+
+        <div class="tasks-section">
+            <div id="tasksList"></div>
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <div style="font-size: 4rem;">📋</div>
+                <h3>No tasks yet!</h3>
+                <p>Add your first DevOps task to get started with your workflow management.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
