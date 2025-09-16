@@ -13,7 +13,7 @@ GitHub Repository → AWS CodePipeline → Elastic Beanstalk → Production
 ## Technologies Used
 **Frontend**: HTML5, CSS3, JavaScript ES6+  
 **Cloud**: AWS (Beanstalk, EC2, S3, IAM, CodePipeline)  
-**DevOps**: Terraform, GitHub Actions, AWS CLI  
+**DevOps**: Terraform, AWS CLI  
 **Platform**: Apache Tomcat, Amazon Linux 2  
 
 ## Infrastructure & Deployment
