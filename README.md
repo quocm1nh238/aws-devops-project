@@ -3,7 +3,7 @@
 ## Overview
 A responsive todo web application deployed on AWS with automated CI/CD pipeline and infrastructure as code.
 
-**Live Demo**: http://todo-env-new.eba-ysmyupg7.us-east-1.elasticbeanstalk.com/
+**Live Demo**: http://todo-env-new.eba-ysmyupg7.us-east-1.elasticbeanstalk.com/ (<- This link will expire soon)
 
 ## Architecture
 ```
